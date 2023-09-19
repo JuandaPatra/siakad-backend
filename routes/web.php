@@ -16,13 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::redirect('/', '/dashboard-general-dashboard');
 
 // Dashboard
-Route::get('/dashboard-general-dashboard', function () {
+Route::get('/dashboard', function () {
     return view('pages.dashboard-general-dashboard', ['type_menu' => 'dashboard']);
 });
 Route::get('/dashboard-ecommerce-dashboard', function () {
     return view('pages.dashboard-ecommerce-dashboard', ['type_menu' => 'dashboard']);
 });
 
+// Route::get('/login', function(){
+//     return view('admin.login.login');
+// })->name('login');
+
+
+// Route::get('/register', function(){
+//     return view('admin.register.index');
+// })->name('register');
 
 // Layout
 Route::get('/layout-default-layout', function () {
